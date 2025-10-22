@@ -1,0 +1,179 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f3f4f6;
+  transition: background-color 0.3s ease;
+}
+
+.dark body {
+  background-color: #111827;
+}
+
+/* Theme toggle icon colors */
+#theme-toggle svg {
+  color: #1f2937;
+}
+
+.dark #theme-toggle svg {
+  color: #f9fafb;
+}
+
+#theme-toggle {
+  background-color: transparent;
+}
+
+.dark #theme-toggle {
+  border-color: #fbbf24;
+}
+
+/* Card component */
+.card {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+}
+
+.dark .card {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+/* Text colors */
+h5,
+p {
+  color: #111827;
+}
+
+.dark h5,
+.dark p {
+  color: #f9fafb;
+}
+
+/* Divider colors */
+hr {
+  background-color: #e5e7eb;
+}
+
+.dark hr {
+  background-color: #374151;
+}
+
+/* ========================================
+       CHECKBOX COMPONENT
+       ======================================== */
+.checkbox {
+  width: 23px;
+  height: 23px;
+  border-radius: 6px;
+  border: 1.5px solid #d1d5db;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  flex-shrink: 0;
+}
+
+.dark .checkbox {
+  border-color: #6b7280;
+  background-color: transparent;
+}
+
+/* Checked state */
+.checkbox:checked {
+  background-color: #5087f8;
+  border-color: #5087f8;
+}
+
+.checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+/* Hover effect - show thin checkmark preview INSIDE checkbox only */
+.checkbox:not(:checked):hover {
+  background-color: rgba(59, 130, 246, 0.05);
+  border-color: #2469f6;
+}
+
+.checkbox:not(:checked):hover::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 15px;
+  border: solid #9ca3af;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  opacity: 0.5;
+}
+
+.dark .checkbox:not(:checked):hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.dark .checkbox:not(:checked):hover::after {
+  border-color: #d1d5db;
+  opacity: 0.6;
+}
+
+/* ========================================
+       PAGE LIST ITEM
+       ======================================== */
+.page-item {
+  cursor: pointer;
+}
+
+/* ========================================
+       TOAST COMPONENT (Sonner-like)
+       ======================================== */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.toast {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 300px;
+  pointer-events: auto;
+}
+
+.dark .toast {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.toast-icon {
+  width: 20px;
+  height: 20px;
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.toast-message {
+  flex: 1;
+  font-size: 14px;
+  color: #111827;
+}
+
+.dark .toast-message {
+  color: #f9fafb;
+}
